@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Apex Documentation</title>
+    <meta charset="UTF-8">
+    <script type="module" src="./assets/index.js"></script>
+    <script type="module" src="./assets/search-idx.js"></script>
+    <script type="module" src="./assets/search.js"></script>
+    <script charset="UTF-8" src="./assets/highlight.js"></script>
+    <script charset="UTF-8" src="./assets/mark.js"></script>
+    <script charset="UTF-8" src="./assets/lunr.js"></script>
+    <link rel="stylesheet" href="./assets/highlight.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/index.css" />
+    <link rel="shortcut icon" type="image/png" href="./assets/favicon.png" />
+  </head>
+
+  <body>
+    <div id="side-bar">
+
+      <div id="logo-container">
+        <div class="title">
+          Apex Documentation
+        </div>
+        <img src="assets/logo.png" />
+        <div class="subtitle">
+          Powered by <a target="_blank" rel="noopener noreferrer" href="https://github.com/no-stack-dub-sack/apexdox-vs-code">ApexDox VS Code</a>
+        </div>
+      </div>
+      <div id="search-wrapper">
+        <div class="search-icon"></div>
+        <input id="search-input" type="text" autocomplete="off" placeholder="Search...">
+      </div>
+      <ul id="search-results" class=""></ul>
+      <div class="navbar">
+        <nav role="navigation">
+          <a class="nav-header" id="home" href="javascript:void(0)" onclick="goToLocation('index.html');">
+            Home
+          </a>
+          <details id="Miscellaneous" class="group-name">
+            <summary id="header-Miscellaneous" class="nav-header">
+              <span>Miscellaneous</span>
+            </summary>
+            <ul>
+              <!-- menu items -->
+              <li title="DocGenClass" id="item-DocGenClass" class="nav-item class public" onclick="goToLocation('DocGenClass.html');">
+                <a tabindex="1" href="javascript:void(0)">DocGenClass</a>
+              </li>
+              <li title="ServiceOperations" id="item-ServiceOperations" class="nav-item class public" onclick="goToLocation('ServiceOperations.html');">
+                <a tabindex="1" href="javascript:void(0)">ServiceOperations</a>
+              </li>
+            </ul>
+          </details>
+          <details id="Poject_Classes" class="group-name">
+            <summary id="header-Poject_Classes" class="nav-header">
+              <span>Poject Classes</span>
+            </summary>
+            <ul>
+              <!-- menu items -->
+              <li title="CaseServiceLayer" id="item-CaseServiceLayer" class="nav-item class public" onclick="goToLocation('CaseServiceLayer.html');">
+                <a tabindex="1" href="javascript:void(0)">CaseServiceLayer</a>
+              </li>
+              <li title="MilestoneUtils" id="item-MilestoneUtils" class="nav-item class public" onclick="goToLocation('MilestoneUtils.html');">
+                <a tabindex="1" href="javascript:void(0)">MilestoneUtils</a>
+              </li>
+              <li title="TriggerHandler" id="item-TriggerHandler" class="nav-item class public" onclick="goToLocation('TriggerHandler.html');">
+                <a tabindex="1" href="javascript:void(0)">TriggerHandler</a>
+              </li>
+            </ul>
+          </details>
+          <details id="Triggers" class="group-name">
+            <summary id="header-Triggers" class="nav-header">
+              <span>Triggers</span>
+            </summary>
+            <ul>
+              <!-- menu items -->
+              <li title="CaseTriggerHandler" id="item-CaseTriggerHandler" class="nav-item class public" onclick="goToLocation('CaseTriggerHandler.html');">
+                <a tabindex="1" href="javascript:void(0)">CaseTriggerHandler</a>
+              </li>
+            </ul>
+          </details>
+        </nav>
+      </div>
+    </div>
+    <table id="content">
+      <tr>
+        <td class="scoping-panel">
+          Show: <input type="checkbox" checked="true" id="cbx-all" onclick="toggleAllScopes(this.checked);" />
+          <label for="cbx-all">All</label>&nbsp;&nbsp;
+          <input type="checkbox" checked="true" id="cbx-global" onclick="toggleScope('global', this.checked);" />
+          <label for="cbx-global">
+            global
+          </label>&nbsp;&nbsp;<input type="checkbox" checked="true" id="cbx-public" onclick="toggleScope('public', this.checked);" />
+          <label for="cbx-public">
+            public
+          </label>&nbsp;&nbsp;<input type="checkbox" checked="true" id="cbx-protected" onclick="toggleScope('protected', this.checked);" />
+          <label for="cbx-protected">
+            protected
+          </label>&nbsp;&nbsp;<input type="checkbox" checked="true" id="cbx-private" onclick="toggleScope('private', this.checked);" />
+          <label for="cbx-private">
+            private
+          </label>&nbsp;&nbsp;<input type="checkbox" checked="true" id="cbx-testmethod" onclick="toggleScope('testmethod', this.checked);" />
+          <label for="cbx-testmethod">
+            testMethod
+          </label>&nbsp;&nbsp;<input type="checkbox" checked="true" id="cbx-webservice" onclick="toggleScope('webservice', this.checked);" />
+          <label for="cbx-webservice">
+            webService
+          </label>
+        </td>
+      </tr>
+      <tr>
+        <td class="doc-page">
+
+          <div class="section">
+
+            <h2 class="class-title top-level-type" id="CaseServiceLayer">
+              <span>CaseServiceLayer</span>
+            </h2>
+            <div class="class-container">
+
+              <div class="class-description">
+                Service Layyer for the Case Obejct
+              </div>
+              <div class="class-subtitle">
+                Signature
+              </div>
+
+              <div class="class-signature">
+                public class CaseServiceLayer
+              </div>
+              <div class="class-subtitle">
+                See
+              </div>
+              <div class="class-subtitle-description">
+                <a href="javascript:void(0)" onclick="goToLocation('CaseTriggerHandler.html')">CaseTriggerHandler</a>
+              </div>
+            </div>
+            <div class="subsection methods">
+              <h3 class="subsection-title methods">CaseServiceLayer Methods</h3>
+              <div class="methods-container">
+                <ul class="methods-toc">
+                  <li class="method public">
+                    <a class="methods-toc__entry " href="#CaseServiceLayer.completeMilestones">
+                      completeMilestones (newCases, mapOldCases)
+                    </a>
+
+                  </li>
+                </ul>
+                <div class="method public">
+                  <h4 class="method-title " id="CaseServiceLayer.completeMilestones">
+                    <span>completeMilestones(newCases, mapOldCases)</span>
+                  </h4>
+                  <div class="method-subtitle">
+                    Signature
+                  </div>
+
+                  <div class="method-signature">
+                    public static void completeMilestones(List&lt;Case&gt; newCases, Map&lt;Id,Case&gt; mapOldCases)
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="footer">
+
+          <div>
+            <a href="https://github.com/no-stack-dub-sack/apexdox-vs-code" target="_blank" rel="noopener noreferrer">
+              Powered By ApexDox VS Code
+            </a>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+</html>
